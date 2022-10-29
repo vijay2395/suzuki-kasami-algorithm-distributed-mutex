@@ -14,13 +14,23 @@ public class SuzukiKasamiMutualExclusion {
 
 	public static void main(String[] args) {
 
+		//Reading the absolute file path from args
+		String sitesFileAbsolutePath = null;
+
+		if(args.length > 0){
+			sitesFileAbsolutePath = args[0];
+		}
+
+		if(sitesFileAbsolutePath == null){
+			System.out.println("Input file ( in absolute path ) is not specified as arguments! Defaulting to locally available site_nodes.conf file");
+			sitesFileAbsolutePath = "./site_nodes.conf";
+		}
+
 		// Read the config of nodes
 		BufferedReader bufferedReader = null;
-		File file = new File("");
-		String absolutePath = file.getAbsolutePath();
 
-//		File nodes = new File(absolutePath + "\\src\\nodes.config");
-		File nodes = new File(absolutePath + "\\nodes.config");
+		//File should be provided as absolute file path
+		File nodes = new File(sitesFileAbsolutePath);
 		try {
 			bufferedReader = new BufferedReader(new FileReader(nodes));
 			int numberOfNodes = 0;
@@ -79,14 +89,14 @@ public class SuzukiKasamiMutualExclusion {
 			listenToBroadcast.start();
 			String inputQuery = "";
 			while (!inputQuery.equalsIgnoreCase("quit")) {
-				System.out.println("Press ENTER to enter CS: ");
+				System.out.println("Press <ENTER> to enter Critical Section: ");
 				Scanner scan_query = new Scanner(System.in);
 				inputQuery = scan_query.nextLine();
 				System.out.println("Site-"+thisSiteNumber + " is trying to enter Critical Section");
 				if (localSite.token == 1) {
 
 					localSite.processingCS = 1;
-					System.out.println("Site-"+thisSiteNumber+" has token. Executing in the Critical Section.....");
+					System.out.println("Site-"+thisSiteNumber+" has token. Critical Section Execution begins..");
 
 					Thread.sleep(Utils.CS_EXECUTE_TIME);
 
@@ -108,7 +118,7 @@ public class SuzukiKasamiMutualExclusion {
 						Thread.sleep(Utils.WAITTING_FOR_TOKEN_TIME);
 					}
 
-					System.out.println("Site-"+thisSiteNumber+" has received token. Executing in Critical Section.....");
+					System.out.println("Site-"+thisSiteNumber+" has received token. Critical Section Execution begins..");
 					Thread.sleep(Utils.CS_EXECUTE_TIME);
 					localSite.processingCS = 0;
 					System.out.println("Site-"+thisSiteNumber+ " is exiting Critical Section.");

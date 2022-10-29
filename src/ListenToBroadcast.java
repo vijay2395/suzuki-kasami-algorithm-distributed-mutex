@@ -22,7 +22,6 @@ public class ListenToBroadcast extends Thread {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
-
     }
 
 }
