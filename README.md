@@ -27,3 +27,12 @@ For implementation we use, Java 1.8, Java Socket Programming, and Threading. the
  - Initially, Site 1 possesses the token.
  - In this implementation, the program will run until terminating it deliberately using `Ctrl+C` or `Cmd+C`.
 
+
+#### Refer Embedded Video to know Step by Step Process
+
+
+https://user-images.githubusercontent.com/20264360/198835584-4c569917-f042-4a57-bc91-9c24e5b60f86.mp4
+
+
+
+
