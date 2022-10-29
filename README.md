@@ -15,7 +15,6 @@ If a site possess a unique token, then only it can be allowed to execute in the 
 
 For implementation we use, Java 1.8, Java Socket Programming, and Threading. the program will achieve mutual exclusion over the network or on a local computer using different ports. Note that, the ip's and ports should be ensured to be accessible to each sites.
 
-
 #### Steps:
  - The program can be run locally on terminals.
  - Each terminal runs a single site.
