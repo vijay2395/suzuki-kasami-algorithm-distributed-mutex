@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="suzuki-kasami-algorithm-distributed-mutex:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/suzuki_kasami_algorithm_distributed_mutex_jar</output-path>
+    <root id="archive" name="suzuki-kasami-algorithm-distributed-mutex.jar">
+      <element id="module-output" name="suzuki-kasami-algorithm-distributed-mutex" />
+    </root>
+  </artifact>
+</component>
