@@ -13,7 +13,7 @@ This file should be changed as requirement. (e.g. how many sites should be in th
 The Suzuki–Kasami algorithm is a token-based algorithm for achieving mutual exclusion in distributed systems. In the system there are multiple site which can execute some specific task with entering into the critical section, mutual exclusively. To achieve this mutual exclusion, we implement token based Suzuki-Kasami Broadcasting Algorithm here.
 If a site possess a unique token, then only it can be allowed to execute in the critical section.
 
-For implementation:
+**For implementation:**
 
 1. MacOS operating system (since the directory structure will be different for MacOS, it uses \ (backslash) as opposed to (/) slash in windows. If we can change this in SuzukuKasamiMutualExclusion.java line 26 , then it may work for windows
 
