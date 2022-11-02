@@ -26,7 +26,10 @@ For implementation we use, Java 1.8, Java Socket Programming, and Threading. the
  - When all the sites are running simultaneously, press enter on any site for requesting entering into the critical section. 
  - Initially, Site 1 possesses the token.
  - In this implementation, the program will run until terminating it deliberately using `Ctrl+C` or `Cmd+C`.
- - Embedded video for running steps : https://user-images.githubusercontent.com/20264360/198835584-4c569917-f042-4a57-bc91-9c24e5b60f86.mp4
+ - Embedded video for running steps :
+  
+   https://user-images.githubusercontent.com/20264360/198835584-4c569917-f042-4a57-bc91-9c24e5b60f86.mp4
+
  - Git repo for the same : https://github.com/vijay2395/suzuki-kasami-algorithm-distributed-mutex
 
 
