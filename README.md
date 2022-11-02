@@ -13,10 +13,17 @@ This file should be changed as requirement. (e.g. how many sites should be in th
 The Suzuki–Kasami algorithm is a token-based algorithm for achieving mutual exclusion in distributed systems. In the system there are multiple site which can execute some specific task with entering into the critical section, mutual exclusively. To achieve this mutual exclusion, we implement token based Suzuki-Kasami Broadcasting Algorithm here.
 If a site possess a unique token, then only it can be allowed to execute in the critical section.
 
-For implementation we use, Java 1.8, Java Socket Programming, and Threading. the program will achieve mutual exclusion over the network or on a local computer using different ports. Note that, the ip's and ports should be ensured to be accessible to each sites.
+For implementation we use:
+
+1. MacOS operating system (since the directory structure will be different for MacOS, it uses \ (backslash) as opposed to (/) slash in windows. If we can change this in SuzukuKasamiMutualExclusion.java line 26 , then it may work for windows
+
+2. Requires Java 1.8, Java Socket Programming, and Threading. the program will achieve mutual exclusion over the network or on a local computer using different ports. Note that, the ip's and ports should be ensured to be accessible to each sites.
+
+3. More steps are detailed below. 
+
 
 #### Steps:
- - The program can be run locally on terminals.
+ - The program can be run locally on terminals/command prompt.
  - Each terminal runs a single site.
  - To start a site: 
     - We need to run the command `java -jar suzuki-kasami-algorithm-distributed-mutex.jar <optional-input-file>`
